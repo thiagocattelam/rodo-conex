@@ -1,0 +1,120 @@
+@font-face {
+  font-family: Gotham;
+  src: url(../assets/fonts/Gotham-Black.otf) format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Gotham_book;
+  src: url(../assets/fonts/Gotham-BookIta.otf) format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --tertiary-color: #9bd239;
+  --quaternary-color: #171f5b;
+}
+
+.header__menu a:hover {
+  color: var(--tertiary-color);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.header__menu {
+  display: flex;
+  gap: 60px;
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: Gotham_book;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.header__logo {
+  width: 90px;
+  height: auto;
+  margin: 20px 45px;
+
+  @media (min-width: 768px) {
+    width: 200px;
+    height: auto;
+    margin: 20px 45px;
+  }
+}
+
+.hero__banner {
+  display: block;
+  width: 100%;
+}
+
+.hero__conteudo {
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  left: 0;
+  right: 0;
+
+  h1 {
+    font-family: Gotham;
+    font-style: italic;
+    font-size: 30px;
+    color: var(--primary-color);
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--tertiary-color);
+
+    @media (min-width: 768px) {
+      font-size: 50px;
+    }
+  }
+  p {
+    font-family: Gotham_book;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--primary-color);
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    margin: 5px 0 0 0;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      margin: 10px auto 0 auto;
+      max-width: 30ch;
+      text-wrap: balance;
+      line-height: 1.5;
+      span {
+        display: inline;
+      }
+    }
+  }
+  span {
+    display: block;
+  }
+}
+
+.hero {
+  position: relative;
+}
