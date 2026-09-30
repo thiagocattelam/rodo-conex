@@ -1,12 +1,12 @@
 @font-face {
   font-family: Gotham;
   src: url(../assets/fonts/Gotham-Black.otf) format("opentype");
-  font-weight: 400;
+  font-weight: 700;
 }
 @font-face {
   font-family: Gotham_book;
   src: url(../assets/fonts/Gotham-BookIta.otf) format("opentype");
-  font-weight: 700;
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -15,10 +15,6 @@
   --secondary-color: #000;
   --tertiary-color: #9bd239;
   --quaternary-color: #171f5b;
-}
-
-.header__menu a:hover {
-  color: var(--tertiary-color);
 }
 
 body {
@@ -41,15 +37,70 @@ body {
   }
 }
 
-.header__menu {
+.header__botao {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
   display: flex;
-  gap: 60px;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  z-index: 100;
+  span {
+    background-color: var(--primary-color);
+    width: 40px;
+    height: 3px;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header__menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: min(80vw, 300px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background: var(--quaternary-color);
+  transform: translateX(100%);
+  visibility: hidden;
+  transition:
+    transform 0.3s ease-in,
+    visibility 0.4s;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    padding: 0;
+    gap: 60px;
+    position: static;
+    background: none;
+    transform: none;
+    visibility: visible;
+    transition: none;
+  }
   a {
     text-decoration: none;
     color: var(--primary-color);
     font-family: Gotham_book;
     font-size: 18px;
     text-transform: uppercase;
+    &:hover {
+      color: var(--tertiary-color);
+    }
+  }
+  &.header__menu--aberto {
+    transform: translateX(0);
+    visibility: visible;
+    transition:
+      transform 0.3s ease-out,
+      visibility 0.4s;
   }
 }
 
@@ -81,7 +132,6 @@ body {
     font-family: Gotham;
     font-style: italic;
     font-size: 30px;
-    color: var(--primary-color);
     margin: 0;
     text-transform: uppercase;
     color: var(--tertiary-color);
@@ -117,4 +167,14 @@ body {
 
 .hero {
   position: relative;
+}
+
+.footer__banner {
+  display: block;
+  width: 100%;
+}
+
+.servicos__homenzinho {
+  display: block;
+  width: 100%;
 }
