@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="icon" href="assets/home/Logo-icon-navegador.png" />
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/carrossel.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -50,22 +51,44 @@
         </div>
       </section>
       <section class="destaques">
-        <button type="button"></button>
-        <ul>
-          <li>
+        <button type="button" class="destaques__seta destaques__seta--anterior">
+          <svg width="48" height="48" viewBox="0 0 24 24">
+            <polyline
+              points="16,4 8,12 16,20"
+              fill="none"
+              stroke="#1f2a7a"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <ul class="destaques__conteudo">
+          <li class="destaques__item destaques__item--ativo">
             <img src="assets/home/Cotacao-icon.png" alt="" />
             <p>Faça sua <strong>Cotação</strong></p>
           </li>
-          <li>
+          <li class="destaques__item">
             <img src="assets/home/Clientes-icon.png" alt="" />
             <p>Conheça alguns de nossos <strong>Clientes</strong></p>
           </li>
-          <li>
+          <li class="destaques__item">
             <img src="assets/home/cargas-icon.png" alt="" />
             <p>Cargas <strong>Rastreadas</strong> via satélite</p>
           </li>
         </ul>
-        <button type="button"></button>
+        <button type="button" class="destaques__seta destaques__seta--proxima">
+          <svg width="48" height="48" viewBox="0 0 24 24">
+            <polyline
+              points="8,4 16,12 8,20"
+              fill="none"
+              stroke="#1f2a7a"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </section>
       <section class="seguranca">
         <div class="seguranca__conteudo">
