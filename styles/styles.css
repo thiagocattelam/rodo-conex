@@ -260,6 +260,11 @@ body {
   display: flex;
 }
 
+.destaques__link {
+  text-decoration: none;
+  color: var(--quaternary-color);
+}
+
 .seguranca__conteudo {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -343,7 +348,59 @@ body {
   }
 }
 
-.footer__banner {
+.quem-somos__conteudo {
+  color: var(--quaternary-color);
+  text-align: center;
+  font-style: italic;
+  font-family: Gotham_book;
+  font-size: 15px;
+
+  h2 {
+    text-transform: uppercase;
+    font-family: Gotham;
+    font-size: 35px;
+    margin: 0;
+    margin-top: 60px;
+    span {
+      color: var(--tertiary-color);
+    }
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
+  }
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      max-width: 55ch;
+      margin: 0 auto;
+      margin-bottom: 60px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.quem-somos__botao {
+  background: var(--quaternary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 30px;
+  font-family: Gotham;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 8px;
+
+  @media (min-width: 768px) {
+    font-size: 15px;
+    padding: 16px 55px;
+  }
+}
+
+.quem-somos__banner {
   display: block;
   width: 100%;
 }
