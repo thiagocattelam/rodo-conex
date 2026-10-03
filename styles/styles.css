@@ -410,11 +410,13 @@ body {
   display: block;
   width: 270px;
   margin-left: -80px;
+  margin-bottom: -2px;
 
   @media (min-width: 768px) {
     width: 600px;
     margin-top: -200px;
     margin-left: 0;
+    margin-bottom: -2px;
   }
 }
 
@@ -565,4 +567,39 @@ body {
 .servicos-fale-conosco__seta--proxima {
   grid-area: proxima;
   margin-left: -15px;
+}
+
+.footer {
+  background: var(--quaternary-color);
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 40px 0;
+
+  img {
+    height: 40px;
+
+    @media (min-width: 768px) {
+      width: 80px;
+    }
+  }
+}
+
+.logo-footer {
+  img {
+    width: 180px;
+    margin-left: 40px;
+  }
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  img {
+    height: 60px;
+  }
 }
