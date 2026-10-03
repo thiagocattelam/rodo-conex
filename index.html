@@ -94,10 +94,8 @@
       </section>
       <section class="seguranca">
         <div class="seguranca__conteudo">
-          <h2 grid-area="titulo">
-            <span>Seu produto</span> entregue com <span>segurança!</span>
-          </h2>
-          <div class="seguranca__texto" grid-area="texto">
+          <h2><span>Seu produto</span> entregue com <span>segurança!</span></h2>
+          <div class="seguranca__texto">
             <p>
               A Rodo Conex tem a responsabilidade de transportar as cargas com o
               cuidado que cada uma exige.
@@ -109,12 +107,7 @@
               em trânsito.
             </p>
           </div>
-          <img
-            src="assets/home/caixa.png"
-            alt=""
-            class="seguranca__banner"
-            grid-area="imagem"
-          />
+          <img src="assets/home/caixa.png" alt="" class="seguranca__banner" />
         </div>
         <div class="seguranca__icones">
           <img
@@ -156,11 +149,28 @@
         <img
           src="assets/home/Homenzinho.png"
           alt=""
-          class="servicos__homenzinho"
+          class="servicos-fale-conosco__imagem"
         />
-        <ul>
-          <li>
-            <h2>Nossos serviços</h2>
+        <button
+          type="button"
+          class="servicos-fale-conosco__seta servicos-fale-conosco__seta--anterior"
+        >
+          <svg width="40" height="40" viewBox="0 0 24 24">
+            <polyline
+              points="16,4 8,12 16,20"
+              fill="none"
+              stroke="#1f2a7a"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <ul class="servicos-fale-conosco__lista">
+          <li
+            class="servicos-fale-conosco__item servicos-fale-conosco__item--nossos-servicos"
+          >
+            <h2>Nossos <span>serviços</span></h2>
             <p>
               Somos especializados em transporte de cargas dedicadas,
               armazenagem e paletização, com soluções eficazes para o seu
@@ -172,8 +182,10 @@
               >Saiba mais</a
             >
           </li>
-          <li>
-            <h2>Fale conosco</h2>
+          <li
+            class="servicos-fale-conosco__item servicos-fale-conosco__item--fale-conosco servicos-fale-conosco__item--ativo"
+          >
+            <h2>Fale <span>conosco</span></h2>
             <p>
               Atendimento exclusivo e personalizado, para cada tipo de cliente.
               A sua demanda é prioridade na Rodo Conex.
@@ -185,6 +197,21 @@
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="servicos-fale-conosco__seta servicos-fale-conosco__seta--proxima"
+        >
+          <svg width="40" height="40" viewBox="0 0 24 24">
+            <polyline
+              points="8,4 16,12 8,20"
+              fill="none"
+              stroke="#1f2a7a"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </section>
     </main>
     <footer>
