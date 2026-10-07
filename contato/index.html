@@ -33,7 +33,7 @@
         <picture>
           <source
             media="(min-width: 768px)"
-            srcset="../assets/contatos/Banner principal Desktop.png"
+            srcset="../assets/contatos/Banner-principal-Desktop.png"
           />
           <img
             src="../assets/contatos/Banner principal mobile.png"
@@ -45,169 +45,289 @@
           <h1>Entre em contato <span>Conosco</span></h1>
         </div>
       </section>
-      <section class="contato">
-        <h2>Nossa equipe está sempre pronta para lhe atender.</h2>
-        <p>
-          Envie suas dúvidas, ou sugestões, que lhe retornaremos o mais breve
-          possível.
-        </p>
+      <div class="contato__container">
+        <section class="contato">
+          <h2>Nossa equipe está sempre pronta para lhe atender.</h2>
+          <p>
+            Envie suas dúvidas, ou sugestões, que lhe retornaremos o mais breve
+            possível.
+          </p>
 
-        <form
-          class="contato__form"
-          id="form-contato"
-          action="/enviar"
-          method="post"
-        >
-          <input
-            class="full"
-            type="text"
-            name="nome"
-            placeholder="Nome"
-            aria-label="Nome"
-            autocomplete="name"
-            required
-          />
-          <input
-            type="tel"
-            name="telefone"
-            placeholder="Telefone"
-            aria-label="Telefone"
-            autocomplete="tel"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="E-mail"
-            aria-label="E-mail"
-            autocomplete="email"
-            required
-          />
-          <input
-            type="text"
-            name="cidade"
-            placeholder="Cidade"
-            aria-label="Cidade"
-          />
-          <input
-            type="text"
-            name="estado"
-            placeholder="Estado"
-            aria-label="Estado"
-          />
-          <textarea
-            class="full"
-            name="mensagem"
-            placeholder="Mensagem"
-            aria-label="Mensagem"
-            required
-          ></textarea>
-
-          <div class="contato__acoes full">
-            <button type="submit">E-mail</button>
-            <button type="button" id="btn-whats">WhatsApp</button>
-          </div>
-        </form>
-      </section>
-      <section class="contato contato--trabalhe">
-        <h2>Trabalhe conosco</h2>
-        <p>
-          Se tem interesse em fazer parte da nossa equipe de profissionais faça
-          seu cadastro aqui
-        </p>
-
-        <form
-          class="contato__form"
-          action="/curriculo"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <input
-            class="full"
-            type="text"
-            name="nome"
-            placeholder="Nome"
-            aria-label="Nome"
-            autocomplete="name"
-            required
-          />
-          <input
-            type="tel"
-            name="telefone"
-            placeholder="Telefone"
-            aria-label="Telefone"
-            autocomplete="tel"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="E-mail"
-            aria-label="E-mail"
-            autocomplete="email"
-            required
-          />
-          <input
-            type="text"
-            name="cidade"
-            placeholder="Cidade"
-            aria-label="Cidade"
-          />
-          <input
-            type="text"
-            name="estado"
-            placeholder="Estado"
-            aria-label="Estado"
-          />
-          <textarea
-            class="full"
-            name="mensagem"
-            placeholder="Mensagem"
-            aria-label="Mensagem"
-          ></textarea>
-          <input
-            class="full"
-            type="text"
-            name="vaga"
-            placeholder="Vaga de interesse"
-            aria-label="Vaga de interesse"
-          />
-
-          <div class="anexo full">
+          <form
+            class="contato__form"
+            id="form-contato"
+            action="/enviar"
+            method="post"
+          >
             <input
-              class="anexo__input"
-              type="file"
-              id="curriculo"
-              name="curriculo"
-              accept=".pdf,.doc,.docx"
+              class="full"
+              type="text"
+              name="nome"
+              placeholder="Nome"
+              aria-label="Nome"
+              autocomplete="name"
               required
             />
-            <label class="anexo__label" for="curriculo">
-              <svg
-                viewBox="0 0 34 36"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M26 15V9l-7-7H7a3 3 0 0 0-3 3v24a3 3 0 0 0 3 3h7" />
-                <path d="M19 2v5a2 2 0 0 0 2 2h5" />
-                <path d="M9 14h10M9 19h10M9 24h5" />
-                <g transform="translate(15 17) scale(0.72)" stroke-width="2.7">
-                  <path
-                    d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"
-                  />
-                </g>
-              </svg>
-              <span id="anexo-nome">Anexe seu currículo</span>
-            </label>
-          </div>
+            <input
+              type="tel"
+              name="telefone"
+              placeholder="Telefone"
+              aria-label="Telefone"
+              autocomplete="tel"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              aria-label="E-mail"
+              autocomplete="email"
+              required
+            />
+            <input
+              type="text"
+              name="cidade"
+              placeholder="Cidade"
+              aria-label="Cidade"
+              required
+            />
+            <input
+              type="text"
+              name="estado"
+              placeholder="Estado"
+              aria-label="Estado"
+              required
+            />
+            <textarea
+              class="full"
+              name="mensagem"
+              placeholder="Mensagem"
+              aria-label="Mensagem"
+              required
+            ></textarea>
 
-          <div class="contato__acoes full">
-            <button type="submit">E-mail</button>
-          </div>
-        </form>
+            <div class="contato__acoes full">
+              <button type="submit">E-mail</button>
+              <button type="button" id="btn-whats">WhatsApp</button>
+            </div>
+          </form>
+        </section>
+        <section class="contato contato--trabalhe">
+          <h2>Trabalhe conosco</h2>
+          <p>
+            Se tem interesse em fazer parte da nossa equipe de profissionais
+            faça seu cadastro aqui
+          </p>
+
+          <form
+            class="contato__form"
+            action="/curriculo"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <input
+              class="full"
+              type="text"
+              name="nome"
+              placeholder="Nome"
+              aria-label="Nome"
+              autocomplete="name"
+              required
+            />
+            <input
+              type="tel"
+              name="telefone"
+              placeholder="Telefone"
+              aria-label="Telefone"
+              autocomplete="tel"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              aria-label="E-mail"
+              autocomplete="email"
+              required
+            />
+            <input
+              type="text"
+              name="cidade"
+              placeholder="Cidade"
+              aria-label="Cidade"
+              required
+            />
+            <input
+              type="text"
+              name="estado"
+              placeholder="Estado"
+              aria-label="Estado"
+              required
+            />
+            <textarea
+              class="full"
+              name="mensagem"
+              placeholder="Mensagem"
+              aria-label="Mensagem"
+              required
+            ></textarea>
+            <input
+              class="full"
+              type="text"
+              name="vaga"
+              placeholder="Vaga de interesse"
+              aria-label="Vaga de interesse"
+              required
+            />
+
+            <div class="anexo full">
+              <input
+                class="anexo__input"
+                type="file"
+                id="curriculo"
+                name="curriculo"
+                accept=".pdf,.doc,.docx"
+                required
+              />
+              <label class="anexo__label" for="curriculo">
+                <svg
+                  viewBox="0 0 34 36"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M26 15V9l-7-7H7a3 3 0 0 0-3 3v24a3 3 0 0 0 3 3h7" />
+                  <path d="M19 2v5a2 2 0 0 0 2 2h5" />
+                  <path d="M9 14h10M9 19h10M9 24h5" />
+                  <g
+                    transform="translate(15 17) scale(0.72)"
+                    stroke-width="2.7"
+                  >
+                    <path
+                      d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"
+                    />
+                  </g>
+                </svg>
+                <span id="anexo-nome">Anexe seu currículo</span>
+              </label>
+            </div>
+            <div class="contato__acoes full">
+              <button type="submit">E-mail</button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <section class="cotacoes--operacao">
+        <div class="cotacoes--telefone">
+          <h2>Cotações:</h2>
+          <a href="tel:555199312.2093">
+            <img src="../assets/home/icon-icon.png" alt="" />
+            <p>(51) 99312.2093</p>
+          </a>
+        </div>
+        <div class="cotacoes--whatsapp">
+          <h2>Operação:</h2>
+          <a
+            href="https://api.whatsapp.com/send?phone=5551982059997"
+            target="_blank"
+          >
+            <img src="../assets/home/whats-icon.png" alt="" />
+            <p>(51) 98205.9997</p>
+          </a>
+        </div>
+        <div class="cotacoes--endereco">
+          <a href="https://maps.app.goo.gl/8MjaW4soswi4FnV6A" target="_blank">
+            <img src="../assets/home/Localizacao-icon.png" alt="" />
+            <p>Av. Pres. Vargas, 2965 Rincão dos Ilhéus, Estância Velha - RS</p>
+          </a>
+        </div>
+      </section>
+      <section class="contato--mapa">
+        <iframe
+          class="mapa__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4175.906235604031!2d-51.144804699999995!3d-29.6579786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951945fc6f3ded95%3A0x5a4ab8f3736252ae!2sRodo%20Conex%20-%20Conectando%20mercados!5e1!3m2!1spt-BR!2sbr!4v1791335410566!5m2!1spt-BR!2sbr"
+          title="Localização da Rodo Conex no Google Maps"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+        <img
+          src="../assets/contatos/Banner rodapé Desktop-Mobile.png"
+          alt=""
+          class="mapa__rodape"
+        />
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__principal">
+        <address class="redes-sociais">
+          <a href="https://www.instagram.com/rodoconex" target="_blank">
+            <img src="../assets/home/Insta-icon.png" alt="" />
+          </a>
+          <a href="https://www.facebook.com/rodoconexx" target="_blank">
+            <img src="../assets/home/Facebook-icon.png" alt="" />
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=5551982059997"
+            target="_blank"
+          >
+            <img src="../assets/home/whats-icon.png" alt="" />
+          </a>
+        </address>
+        <div class="logo-footer">
+          <a href="index.html">
+            <img src="../assets/home/Logo.png" alt="" />
+          </a>
+        </div>
+        <nav class="footer__menu">
+          <a href="index.html">Home</a>
+          <a href="empresa/index.html">Empresa</a>
+          <a href="servicos/index.html">Serviços</a>
+          <a href="areadeatendimento/index.html">Área de atendimento</a>
+          <a href="clientes/index.html">Clientes</a>
+          <a href="contato/index.html">Contato</a>
+        </nav>
+        <address class="contato__footer">
+          <div class="contato__telefone">
+            <ul class="contato__lista">
+              <li>
+                <a href="tel:5551993122093">
+                  <img src="../assets/home/icon-icon.png" alt="" />
+                  <p>(51) 99312.2093</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=5551982059997"
+                  target="_blank"
+                >
+                  <img src="../assets/home/whats-icon.png" alt="" />
+                  <p>(51) 98205.9997</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/8MjaW4soswi4FnV6A"
+                  target="_blank"
+                >
+                  <img src="../assets/home/Localizacao-icon.png" alt="" />
+                  <p>
+                    Av. Pres. Vargas, 2965 Rincão dos Ilhéus, Estância Velha -
+                    RS
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </address>
+      </div>
+      <div class="footer__dolfinos">
+        <p>Rodo Conex 2026 - Todos os Direitos Reservados</p>
+        <img src="../assets/home/dolfinos-rodape.png" alt="" />
+      </div>
+    </footer>
   </body>
 </html>

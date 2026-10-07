@@ -737,6 +737,28 @@ body {
       color: var(--primary-color);
     }
   }
+
+  @media (min-width: 768px) {
+    margin-top: 50px;
+    h1 {
+      font-size: 40px;
+    }
+  }
+}
+
+.contato__container {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25px 20px;
+  }
+
+  .contato__container .contato {
+    flex: 1;
+    max-width: 420px;
+    margin: 0;
+  }
 }
 
 .contato {
@@ -753,6 +775,12 @@ body {
   text-align: center;
   color: #1b2a6b;
   font-style: italic;
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 30px;
+    }
+  }
 }
 
 .contato__form {
@@ -841,4 +869,116 @@ body {
   outline: 2px solid #1b2a6b;
   outline-offset: 4px;
   border-radius: 4px;
+}
+
+.cotacoes--operacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: Gotham;
+  color: var(--quaternary-color);
+  text-transform: uppercase;
+  font-style: italic;
+  margin-top: 50px;
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--quaternary-color);
+    gap: 10px;
+  }
+
+  img {
+    height: 24px;
+    width: auto;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-family: Gotham_book;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+    row-gap: 10px;
+    margin-bottom: 30px;
+
+    p {
+      max-width: 22ch;
+    }
+  }
+}
+
+.cotacoes--telefone {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.cotacoes--whatsapp {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.cotacoes--endereco {
+  text-transform: none;
+  font-size: 20px;
+  text-align: center;
+  max-width: 60%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  img {
+    height: 45px;
+    width: auto;
+  }
+
+  @media (min-width: 768px) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    max-width: none;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.mapa {
+  position: relative;
+}
+
+.mapa__iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+}
+
+.mapa__rodape {
+  display: block;
+  width: 100%;
+  position: relative;
+  margin-top: -80px;
+}
+
+@media (min-width: 768px) {
+  .mapa__iframe {
+    height: 850px;
+  }
+
+  .mapa__rodape {
+    margin-top: -18vw;
+  }
 }
