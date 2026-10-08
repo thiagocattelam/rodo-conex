@@ -1,11 +1,11 @@
 @font-face {
   font-family: Gotham;
-  src: url(../assets/fonts/Gotham-Black.otf) format("opentype");
+  src: url(../assets/fonts/gotham-black.otf) format("opentype");
   font-weight: 700;
 }
 @font-face {
   font-family: Gotham_book;
-  src: url(../assets/fonts/Gotham-BookIta.otf) format("opentype");
+  src: url(../assets/fonts/gotham-bookita.otf) format("opentype");
   font-weight: 400;
   font-style: italic;
 }
