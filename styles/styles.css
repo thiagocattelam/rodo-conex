@@ -20,6 +20,10 @@
 body {
   margin: 0;
   padding: 0;
+
+  &:has(.header__menu--aberto) {
+    overflow: hidden;
+  }
 }
 
 .header {
@@ -57,6 +61,11 @@ body {
       opacity 0.3s;
   }
   &.header__botao--aberto {
+    position: fixed;
+    top: 20px;
+    right: 18px;
+    margin: 0;
+
     span:nth-child(1) {
       transform: translateY(9px) rotate(45deg);
     }
@@ -81,30 +90,20 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 10px;
+  padding: 60px 10px 10px;
   background: var(--quaternary-color);
   transform: translateX(100%);
   visibility: hidden;
   transition:
     transform 0.3s ease-in,
     visibility 0.4s;
-  @media (min-width: 768px) {
-    flex-direction: row;
-    height: auto;
-    width: auto;
-    padding: 0;
-    gap: 60px;
-    position: static;
-    background: none;
-    transform: none;
-    visibility: visible;
-    transition: none;
-  }
+
   a {
+    padding: 10px;
     text-decoration: none;
     color: var(--primary-color);
     font-family: Gotham_book;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
     &:hover {
       color: var(--tertiary-color);
@@ -116,6 +115,29 @@ body {
     transition:
       transform 0.3s ease-out,
       visibility 0.4s;
+  }
+
+  .redes-sociais--menu {
+    flex-basis: auto;
+    margin: auto auto 20px;
+    gap: 24px;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    padding: 0;
+    gap: 60px;
+    position: static;
+    background: none;
+    transform: none;
+    visibility: visible;
+    transition: none;
   }
 }
 
