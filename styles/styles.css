@@ -36,7 +36,7 @@ body {
   width: 100%;
   z-index: 100;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     justify-content: center;
   }
 }
@@ -76,7 +76,7 @@ body {
       transform: translateY(-9px) rotate(-45deg);
     }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 }
@@ -121,23 +121,27 @@ body {
     flex-basis: auto;
     margin: auto auto 20px;
     gap: 24px;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       display: none;
     }
   }
 
-  @media (min-width: 768px) {
-    display: flex;
+  @media (min-width: 1024px) {
     flex-direction: row;
     height: auto;
     width: auto;
     padding: 0;
-    gap: 60px;
+    gap: clamp(16px, calc(5vw - 30px), 60px);
     position: static;
     background: none;
     transform: none;
     visibility: visible;
     transition: none;
+
+    a {
+      font-size: clamp(15px, 1.4vw, 20px);
+      white-space: nowrap;
+    }
   }
 }
 
@@ -147,9 +151,8 @@ body {
   margin: 20px 45px;
 
   @media (min-width: 768px) {
-    width: 200px;
-    height: auto;
-    margin: 20px 45px;
+    width: clamp(120px, 12vw, 200px);
+    margin: 20px clamp(16px, 3vw, 45px);
   }
 }
 
@@ -174,7 +177,7 @@ body {
     color: var(--tertiary-color);
 
     @media (min-width: 768px) {
-      font-size: 50px;
+      font-size: clamp(36px, 5vw, 50px);
     }
   }
   p {
@@ -187,7 +190,7 @@ body {
     margin: 5px 0 0 0;
 
     @media (min-width: 768px) {
-      font-size: 20px;
+      font-size: clamp(15px, 2vw, 20px);
       margin: 10px auto 0 auto;
       max-width: 30ch;
       text-wrap: balance;
@@ -240,7 +243,7 @@ body {
   @media (min-width: 768px) {
     display: flex;
     img {
-      width: 80px;
+      width: clamp(60px, 7vw, 80px);
     }
   }
 }
@@ -270,10 +273,10 @@ body {
 
   @media (min-width: 768px) {
     display: flex;
-    margin: 0 20px;
-    width: 220px;
+    margin: 0 clamp(8px, 1.5vw, 20px);
+    width: clamp(170px, 20vw, 220px);
     p {
-      font-size: 20px;
+      font-size: clamp(15px, 1.8vw, 20px);
     }
   }
 }
@@ -312,12 +315,12 @@ body {
     grid-template-areas: "titulo texto imagem";
 
     h2 {
-      font-size: 30px;
+      font-size: clamp(22px, 2.2vw, 30px);
       align-self: center;
-      margin-left: 200px;
+      margin-left: clamp(20px, calc(14vw - 70px), 200px);
     }
     h2 span {
-      font-size: 40px;
+      font-size: clamp(28px, 3vw, 40px);
     }
   }
 }
@@ -329,8 +332,8 @@ body {
   margin-right: 20px;
 
   @media (min-width: 768px) {
-    width: 190px;
-    margin-right: 200px;
+    width: clamp(130px, 12vw, 190px);
+    margin-right: clamp(20px, calc(14vw - 70px), 200px);
   }
 }
 
@@ -346,8 +349,8 @@ body {
 
   @media (min-width: 768px) {
     text-align: left;
-    font-size: 20px;
-    margin-right: 150px;
+    font-size: clamp(16px, 1.6vw, 20px);
+    margin-right: clamp(16px, calc(10vw - 40px), 150px);
     max-width: 55ch;
     line-height: 1.5;
   }
@@ -365,7 +368,7 @@ body {
     height: auto;
 
     @media (min-width: 768px) {
-      width: 190px;
+      width: clamp(130px, 14vw, 190px);
     }
   }
 }
@@ -434,9 +437,11 @@ body {
   margin-left: -80px;
   margin-bottom: -2px;
 
-  @media (min-width: 768px) {
-    width: 600px;
-    margin-top: -200px;
+  @media (min-width: 1024px) {
+    width: 100%;
+    max-width: 600px;
+    justify-self: center;
+    margin-top: clamp(-200px, -10vw, -80px);
     margin-left: 0;
     margin-bottom: -2px;
   }
@@ -465,11 +470,11 @@ body {
       color: var(--tertiary-color);
     }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "nossos-servicos imagem fale-conosco";
     h2 {
-      font-size: 60px;
+      font-size: clamp(40px, 4vw, 60px);
     }
     p {
       font-family: Gotham_book;
@@ -505,14 +510,12 @@ body {
     display: block;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: contents;
     a {
-      @media (min-width: 768px) {
-        display: flex;
-        font-size: 15px;
-        padding: 16px 55px;
-      }
+      display: flex;
+      font-size: 15px;
+      padding: 16px 55px;
     }
   }
 }
@@ -520,7 +523,7 @@ body {
 .servicos-fale-conosco__item--nossos-servicos {
   display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -560,7 +563,7 @@ body {
     margin: -20px 0 0 0;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -570,7 +573,7 @@ body {
 
     h2 {
       text-align: left;
-      font-size: 60px;
+      font-size: clamp(40px, 4vw, 60px);
     }
 
     p {
@@ -599,10 +602,10 @@ body {
     max-width: 24ch;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: flex;
     h2 {
-      font-size: 60px;
+      font-size: clamp(40px, 4vw, 60px);
     }
   }
 }
@@ -613,7 +616,7 @@ body {
   padding: 0;
   grid-area: imagem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 }
@@ -705,7 +708,7 @@ body {
   }
 
   @media (min-width: 768px) {
-    margin: 0 0 0 100px;
+    margin: 0 0 0 clamp(0px, 5vw, 100px);
   }
 }
 
@@ -735,7 +738,7 @@ body {
   @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
-    margin: 40px 100px 40px 100px;
+    margin: 40px clamp(20px, 5vw, 100px);
     gap: 20px;
 
     a {
@@ -761,9 +764,9 @@ body {
   }
 
   @media (min-width: 768px) {
-    margin-top: 50px;
+    margin-top: clamp(16px, 3vw, 50px);
     h1 {
-      font-size: 40px;
+      font-size: clamp(24px, 3vw, 40px);
     }
   }
 }
@@ -849,6 +852,11 @@ body {
   font: inherit;
   font-weight: 700;
   cursor: pointer;
+  white-space: nowrap;
+
+  @media (min-width: 768px) {
+    padding-inline: clamp(24px, 3vw, 40px);
+  }
 }
 
 .contato--trabalhe {
@@ -997,7 +1005,7 @@ body {
 
 @media (min-width: 768px) {
   .mapa__iframe {
-    height: 850px;
+    height: clamp(400px, 45vw, 850px);
   }
 
   .mapa__rodape {
