@@ -438,8 +438,7 @@ body {
   margin-bottom: -2px;
 
   @media (min-width: 1024px) {
-    width: 100%;
-    max-width: 600px;
+    width: min(600px, calc(34vw + 40px));
     justify-self: center;
     align-self: end;
     margin-top: clamp(-200px, -10vw, -80px);
@@ -531,7 +530,8 @@ body {
     justify-content: flex-start;
     text-align: center;
     grid-area: nossos-servicos;
-    margin: 40px -30px 60px 40px;
+    margin: clamp(0px, calc(8vw - 113px), 40px) -30px
+      clamp(30px, calc(6vw - 55px), 60px) 40px;
 
     h2 {
       text-align: right;
@@ -539,8 +539,8 @@ body {
 
     p {
       text-align: right;
-      padding-left: 30%;
-      padding-bottom: 40px;
+      padding-left: clamp(0px, calc(25vw - 290px), 190px);
+      padding-bottom: clamp(20px, calc(4vw - 37px), 40px);
     }
 
     a {
@@ -567,8 +567,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 78px;
-    margin-bottom: 60px;
+    margin-top: clamp(30px, calc(9vw - 95px), 78px);
+    margin-bottom: clamp(30px, calc(6vw - 55px), 60px);
     text-align: center;
     grid-area: fale-conosco;
 
@@ -580,7 +580,7 @@ body {
     p {
       text-align: left;
       margin: 3px;
-      padding-bottom: 40px;
+      padding-bottom: clamp(20px, calc(4vw - 37px), 40px);
     }
 
     a {
