@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="icon" href="../assets/home/logo-icon-navegador.png" />
     <script src="../scripts/menu.js" defer></script>
+    <script src="../scripts/carrossel.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -41,5 +42,200 @@
         </address>
       </nav>
     </header>
+    <main>
+      <section class="hero">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="../assets/clientes/banner-principal-desktop.png"
+          />
+          <img
+            src="../assets/clientes/banner-principal-mobile.png"
+            alt=""
+            class="hero__banner"
+          />
+        </picture>
+        <div class="hero__conteudo hero__clientes--destaque">
+          <h1>
+            <span>Marcas que confiam</span> <span>em nossos serviços!</span>
+          </h1>
+        </div>
+      </section>
+      <section class="clientes">
+        <button type="button" class="clientes__seta clientes__seta--anterior">
+          <svg width="48" height="48" viewBox="0 0 24 24">
+            <polyline
+              points="16,4 8,12 16,20"
+              fill="none"
+              stroke="#1f2a7a"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <ul class="clientes__lista">
+          <li class="clientes__item clientes__item--ativo">
+            <img src="../assets/clientes/logo-cliente-1.png" alt="Grupo Herval" />
+          </li>
+          <li class="clientes__item">
+            <img src="../assets/clientes/logo-cliente-2.png" alt="FA" />
+          </li>
+          <li class="clientes__item">
+            <img src="../assets/clientes/logo-cliente-3.png" alt="Delly's" />
+          </li>
+          <li class="clientes__item">
+            <img src="../assets/clientes/logo-cliente-4.png" alt="Tederic" />
+          </li>
+          <li class="clientes__item">
+            <img src="../assets/clientes/logo-cliente-5.png" alt="Carmak" />
+          </li>
+          <li class="clientes__item">
+            <img src="../assets/clientes/logo-cliente-6.png" alt="Dom Eliseo" />
+          </li>
+          <li class="clientes__item">
+            <img
+              src="../assets/clientes/logo-cliente-7.png"
+              alt="Café Odebrecht"
+            />
+          </li>
+          <li class="clientes__item">
+            <img src="../assets/clientes/logo-cliente-8.png" alt="Quero-Quero" />
+          </li>
+          <li class="clientes__item">
+            <img
+              src="../assets/clientes/logo-cliente-9.png"
+              alt="Fritz & Frida"
+            />
+          </li>
+          <li class="clientes__item clientes__item--base">
+            <img
+              src="../assets/clientes/logo-cliente-10.png"
+              alt="Fort Atacadista"
+            />
+          </li>
+          <li class="clientes__item clientes__item--base">
+            <img src="../assets/clientes/logo-cliente-11.png" alt="Piá" />
+          </li>
+        </ul>
+        <button type="button" class="clientes__seta clientes__seta--proxima">
+          <svg width="48" height="48" viewBox="0 0 24 24">
+            <polyline
+              points="8,4 16,12 8,20"
+              fill="none"
+              stroke="#1f2a7a"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </section>
+      <section class="historia">
+        <p class="historia__texto">
+          Duas décadas de estrada
+          <br class="historia__quebra-mobile" />
+          nos trouxeram até aqui.
+        </p>
+        <p class="historia__destaque">
+          A RodoConex une a experiência de mais
+          <br class="historia__quebra-mobile" />
+          de 20 anos com
+          <br class="historia__quebra-desktop" />
+          uma nova visão de futuro
+          <br class="historia__quebra-mobile" />
+          para se conectar com o que há de melhor.
+        </p>
+        <p class="historia__destaque">
+          Compromisso, qualidade e segurança
+          <br class="historia__quebra-mobile" />
+          em cada trajeto
+          <br class="historia__quebra-desktop" />
+          para maior conexão
+          <br class="historia__quebra-mobile" />
+          com nossos clientes!
+        </p>
+        <p class="historia__texto">Quer fazer parte desta história?</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5551982059997"
+          target="_blank"
+          class="historia__botao"
+          >Fale conosco</a
+        >
+        <img
+          src="../assets/clientes/banner-rodape-desktop-mobile.png"
+          alt=""
+          class="historia__banner"
+        />
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__principal">
+        <address class="redes-sociais">
+          <a href="https://www.instagram.com/rodoconex" target="_blank">
+            <img src="../assets/home/insta-icon.png" alt="" />
+          </a>
+          <a href="https://www.facebook.com/rodoconexx" target="_blank">
+            <img src="../assets/home/facebook-icon.png" alt="" />
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=5551982059997"
+            target="_blank"
+          >
+            <img src="../assets/home/whats-icon.png" alt="" />
+          </a>
+        </address>
+        <div class="logo-footer">
+          <a href="../">
+            <img src="../assets/home/logo.png" alt="" />
+          </a>
+        </div>
+        <nav class="footer__menu">
+          <a href="../">Home</a>
+          <a href="../empresa/">Empresa</a>
+          <a href="../servicos/">Serviços</a>
+          <a href="../areadeatendimento/">Área de atendimento</a>
+          <a href="../clientes/">Clientes</a>
+          <a href="../contato/">Contato</a>
+        </nav>
+        <address class="contato__footer">
+          <div class="contato__telefone">
+            <ul class="contato__lista">
+              <li>
+                <a href="tel:5551993122093">
+                  <img src="../assets/home/icon-icon.png" alt="" />
+                  <p>(51) 99312.2093</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=5551982059997"
+                  target="_blank"
+                >
+                  <img src="../assets/home/whats-icon.png" alt="" />
+                  <p>(51) 98205.9997</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/8MjaW4soswi4FnV6A"
+                  target="_blank"
+                >
+                  <img src="../assets/home/localizacao-icon.png" alt="" />
+                  <p>
+                    Av. Pres. Vargas, 2965 Rincão dos Ilhéus, Estância Velha -
+                    RS
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </address>
+      </div>
+      <div class="footer__dolfinos">
+        <p>Rodo Conex 2026 - Todos os Direitos Reservados</p>
+        <img src="../assets/home/dolfinos-rodape.png" alt="" />
+      </div>
+    </footer>
   </body>
 </html>

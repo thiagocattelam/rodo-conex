@@ -32,3 +32,4 @@ function criarCarrossel(seletorBloco) {
 
 criarCarrossel(".destaques");
 criarCarrossel(".servicos-fale-conosco");
+criarCarrossel(".clientes");

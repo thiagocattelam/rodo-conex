@@ -1406,6 +1406,194 @@ body {
   }
 }
 
+.hero__clientes--destaque {
+  top: 19vw;
+  left: 19.3vw;
+  right: auto;
+  text-align: left;
+
+  h1 {
+    font-size: 4.75vw;
+    line-height: 1.15;
+    span:nth-child(2) {
+      color: var(--primary-color);
+    }
+  }
+
+  @media (min-width: 768px) {
+    top: 13.9vw;
+    left: 17.5vw;
+
+    h1 {
+      font-size: clamp(18px, 1.87vw, 36px);
+    }
+  }
+}
+
+.clientes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 9.3vw;
+  margin-top: 9vw;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+    padding: 0;
+    margin-top: 2.3vw;
+  }
+}
+
+.clientes__seta {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.clientes__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.8vw;
+    width: 57vw;
+  }
+}
+
+.clientes__item {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 23vw;
+
+  img {
+    max-width: 49vw;
+    max-height: 23vw;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    width: 19vw;
+    height: 9.5vw;
+
+    img {
+      max-width: 13vw;
+      max-height: 9vw;
+    }
+  }
+}
+
+.clientes__item--ativo {
+  display: flex;
+}
+
+.clientes__item--base {
+  @media (min-width: 768px) {
+    align-items: flex-end;
+  }
+}
+
+.historia {
+  text-align: center;
+  color: var(--quaternary-color);
+  font-style: italic;
+  margin-top: 10.3vw;
+
+  p {
+    position: relative;
+    z-index: 1;
+    margin: 17px 0 0;
+    padding: 0 8px;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 4vw;
+
+    p {
+      margin-top: 1.65vw;
+    }
+  }
+}
+
+.historia__texto {
+  font-family: Gotham_book;
+  font-size: 14px;
+  line-height: 1.22;
+
+  @media (min-width: 768px) {
+    font-size: clamp(12px, 1.05vw, 20px);
+    line-height: 1.4;
+  }
+}
+
+.historia__destaque {
+  font-family: Gotham;
+  font-size: 12px;
+  line-height: 1.4;
+
+  @media (min-width: 768px) {
+    font-size: clamp(12px, 0.97vw, 19px);
+  }
+}
+
+.historia__quebra-desktop {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}
+
+.historia__quebra-mobile {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.historia__botao {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-top: 29px;
+  background: var(--quaternary-color);
+  color: var(--tertiary-color);
+  border-radius: 7px;
+  padding: 12px 25px;
+  font-family: Gotham;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: 768px) {
+    margin-top: 1.7vw;
+    font-size: clamp(13px, 1.1vw, 21px);
+    padding: clamp(13px, 1.2vw, 23px) clamp(28px, 2.4vw, 46px);
+  }
+}
+
+.historia__banner {
+  display: block;
+  width: 100%;
+  margin-top: -6.6vw;
+
+  @media (min-width: 768px) {
+    margin-top: -10.6vw;
+  }
+}
+
 .hero__contato--destaque {
   h1 {
     margin-top: 30px;
