@@ -700,11 +700,12 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 0 16px;
 }
 
 .logo-footer {
   img {
-    width: 180px;
+    width: clamp(130px, 40vw, 180px);
   }
 }
 
@@ -736,6 +737,7 @@ body {
 
 .contato__lista {
   list-style: none;
+  padding-left: 16px;
   li:not(:last-child) p {
     white-space: nowrap;
   }
@@ -750,6 +752,7 @@ body {
 
   @media (min-width: 768px) {
     margin: 0 0 0 clamp(0px, 5vw, 100px);
+    padding-left: 40px;
   }
 }
 
