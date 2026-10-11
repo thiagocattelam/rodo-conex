@@ -972,6 +972,440 @@ body {
   }
 }
 
+.hero__servicos--destaque {
+  top: 22%;
+
+  h1 {
+    font-size: 27px;
+    line-height: 1.1;
+    span:first-child {
+      color: var(--primary-color);
+      font-size: 0.63em;
+    }
+  }
+
+  p {
+    max-width: 17em;
+    margin: 22px auto 0;
+    letter-spacing: normal;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: clamp(24px, 2.45vw, 47px);
+    }
+
+    p {
+      max-width: 29em;
+      margin-top: clamp(16px, 2.3vw, 44px);
+      font-size: clamp(12px, 1vw, 19px);
+      line-height: 1.4;
+      text-wrap: wrap;
+    }
+  }
+}
+
+.armazenagem {
+  text-align: center;
+  margin-top: 30px;
+
+  h2 {
+    position: relative;
+    z-index: 1;
+    font-family: Gotham;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 1.1;
+    color: var(--quaternary-color);
+    margin: 0;
+
+    span {
+      display: block;
+    }
+    span:first-child {
+      color: var(--tertiary-color);
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 5.8vw;
+
+    h2 {
+      font-size: clamp(24px, 2.5vw, 48px);
+    }
+  }
+}
+
+.armazenagem__subtitulo {
+  position: relative;
+  z-index: 1;
+  max-width: 17em;
+  margin: 14px auto 15px;
+  font-family: Gotham_book;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  color: var(--quaternary-color);
+
+  @media (min-width: 768px) {
+    font-size: clamp(12px, 1vw, 20px);
+    margin: 2.5vw auto;
+  }
+}
+
+.armazenagem__botao {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  background: var(--quaternary-color);
+  color: var(--primary-color);
+  border-radius: 7px;
+  padding: 11px 36px;
+  font-family: Gotham;
+  font-style: italic;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: 768px) {
+    font-size: clamp(10px, 0.8vw, 15px);
+    padding: clamp(11px, 0.8vw, 15px) clamp(36px, 2.4vw, 46px);
+  }
+}
+
+.armazenagem__banner {
+  position: relative;
+  margin-top: -6.2vw;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: -13.5vw;
+  }
+}
+
+.armazenagem__texto {
+  position: absolute;
+  top: 27.5%;
+  left: 0;
+  right: 0;
+  max-width: 17.5em;
+  margin: 0 auto;
+  font-family: Gotham_book;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.15;
+  color: var(--primary-color);
+
+  p {
+    margin: 0 0 0.8em;
+  }
+
+  @media (min-width: 768px) {
+    top: 41%;
+    max-width: 33em;
+    font-size: clamp(12px, 1vw, 20px);
+    line-height: 1.3;
+
+    p {
+      margin-bottom: 0.7em;
+    }
+  }
+}
+
+.armazenagem__empilhadeira {
+  display: block;
+  position: relative;
+  width: 53vw;
+  margin: -26.4vw 0 0 17.9vw;
+
+  @media (min-width: 768px) {
+    width: 39.3vw;
+    margin: -24.4vw 0 0 26.7vw;
+  }
+}
+
+.otimize {
+  text-align: center;
+  color: var(--quaternary-color);
+  font-style: italic;
+  padding: 26px 20px 32px;
+
+  p {
+    max-width: 23em;
+    margin: 0 auto;
+    font-family: Gotham_book;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    line-height: 1.25;
+  }
+
+  @media (min-width: 768px) {
+    padding: 1.5vw 20px 2.45vw;
+
+    p {
+      max-width: 33.5em;
+      font-size: clamp(12px, 1vw, 20px);
+    }
+  }
+}
+
+.otimize .otimize__destaque {
+  max-width: 16em;
+  margin: 1.4em auto 25px;
+  font-family: Gotham;
+  letter-spacing: 0.05em;
+
+  @media (min-width: 768px) {
+    max-width: none;
+    margin: 1.7vw auto 3.3vw;
+    font-size: clamp(12px, 0.95vw, 18px);
+  }
+}
+
+.otimize__botao {
+  display: inline-block;
+  background: var(--quaternary-color);
+  color: var(--tertiary-color);
+  border-radius: 7px;
+  padding: 13px 28px;
+  font-family: Gotham;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: 768px) {
+    font-size: clamp(13px, 1.1vw, 21px);
+    padding: clamp(13px, 1.2vw, 23px) clamp(28px, 2.4vw, 46px);
+  }
+}
+
+.hero--area {
+  background: linear-gradient(var(--quaternary-color), var(--quaternary-color))
+    top / 100% 40vw no-repeat;
+  padding-top: 35.3vw;
+  overflow: hidden;
+
+  .hero__banner {
+    width: 110.4vw;
+    max-width: none;
+    margin-left: -5.5vw;
+  }
+
+  @media (min-width: 768px) {
+    background: none;
+    padding-top: 0;
+
+    .hero__banner {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+.hero__area--destaque {
+  top: 23.6vw;
+  left: 15.5vw;
+  right: auto;
+  text-align: left;
+
+  h1 {
+    font-size: 6.1vw;
+    line-height: 1;
+    span:nth-child(2) {
+      color: var(--primary-color);
+      font-size: 0.64em;
+    }
+  }
+
+  @media (min-width: 768px) {
+    top: 11.7vw;
+    left: 33.3vw;
+
+    h1 {
+      font-size: clamp(20px, 2.85vw, 55px);
+    }
+  }
+}
+
+.hero__mapa {
+  position: absolute;
+  top: 23.3vw;
+  left: 61.8vw;
+  width: 23vw;
+
+  @media (min-width: 768px) {
+    top: 11.1vw;
+    left: 54.4vw;
+    width: 10.9vw;
+  }
+}
+
+.area {
+  text-align: center;
+  color: var(--quaternary-color);
+  font-style: italic;
+}
+
+.area__texto {
+  margin: 20px 0 0;
+  padding: 0 8px;
+  font-family: Gotham_book;
+  font-size: 13.5px;
+  line-height: 1.27;
+
+  @media (min-width: 768px) {
+    margin-top: 2vw;
+    font-size: clamp(12px, 1.05vw, 20px);
+    line-height: 1.3;
+  }
+}
+
+.area__quebra-desktop {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}
+
+.area__quebra-mobile {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.area__destaque {
+  position: relative;
+  z-index: 1;
+  margin: 20px 0 0;
+  padding: 0 8px;
+  font-family: Gotham;
+  font-size: 12.5px;
+  line-height: 1.36;
+
+  @media (min-width: 768px) {
+    margin-top: 1.7vw;
+    font-size: clamp(12px, 0.97vw, 19px);
+    line-height: 1.4;
+  }
+}
+
+.area__botao {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-top: 29px;
+  background: var(--quaternary-color);
+  color: var(--tertiary-color);
+  border-radius: 7px;
+  padding: 11px 24px;
+  font-family: Gotham;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: 768px) {
+    margin-top: 2.85vw;
+    font-size: clamp(13px, 1.1vw, 21px);
+    padding: clamp(13px, 1.2vw, 23px) clamp(28px, 2.4vw, 46px);
+  }
+}
+
+.area__banner {
+  display: block;
+  width: 100%;
+  margin-top: -4.9vw;
+
+  @media (min-width: 768px) {
+    margin-top: -9.15vw;
+  }
+}
+
+.rastreamento {
+  position: relative;
+  overflow: hidden;
+  margin-top: 7.3vw;
+  color: var(--quaternary-color);
+  font-style: italic;
+
+  @media (min-width: 768px) {
+    margin-top: 2.4vw;
+  }
+}
+
+.rastreamento__imagem {
+  display: block;
+  width: 103vw;
+  max-width: none;
+  margin-left: 7.8vw;
+
+  @media (min-width: 768px) {
+    width: 45.8vw;
+    margin-left: 27.1vw;
+  }
+}
+
+.rastreamento__texto {
+  position: absolute;
+  top: 19%;
+  left: 12.7vw;
+
+  p,
+  h2 {
+    margin: 0;
+  }
+
+  span {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    top: 20%;
+    left: 29.3vw;
+  }
+}
+
+.rastreamento__chamada {
+  font-family: Gotham;
+  text-transform: uppercase;
+  font-size: 2.45vw;
+  line-height: 1.05;
+
+  @media (min-width: 768px) {
+    font-size: 1.07vw;
+  }
+}
+
+.rastreamento__texto h2 {
+  font-family: Gotham;
+  text-transform: uppercase;
+  font-size: 3.73vw;
+  line-height: 1.05;
+  margin-top: 0.15em;
+
+  @media (min-width: 768px) {
+    font-size: 1.73vw;
+  }
+}
+
+.rastreamento__descricao {
+  font-family: Gotham_book;
+  font-size: 2.13vw;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+
+  @media (min-width: 768px) {
+    font-size: 0.96vw;
+  }
+}
+
 .hero__contato--destaque {
   h1 {
     margin-top: 30px;
