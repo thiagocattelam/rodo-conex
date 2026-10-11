@@ -108,6 +108,9 @@ body {
     &:hover {
       color: var(--tertiary-color);
     }
+    &.header__link--ativo {
+      color: var(--tertiary-color);
+    }
   }
   &.header__menu--aberto {
     transform: translateX(0);
@@ -305,10 +308,13 @@ body {
     font-family: Gotham;
     font-style: italic;
     margin-left: clamp(0px, calc(20vw - 60px), 40px);
-    font-size: 20px;
+    font-size: clamp(17px, 5.35vw, 20px);
+    line-height: 1.1;
+    white-space: nowrap;
   }
   h2 span {
-    font-size: 25px;
+    display: block;
+    font-size: clamp(21px, 6.7vw, 25px);
   }
 
   @media (min-width: 768px) {
@@ -1008,7 +1014,7 @@ body {
 
 .armazenagem {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
 
   h2 {
     position: relative;
@@ -1030,7 +1036,7 @@ body {
   }
 
   @media (min-width: 768px) {
-    margin-top: 5.8vw;
+    margin-top: 4vw;
 
     h2 {
       font-size: clamp(24px, 2.5vw, 48px);
