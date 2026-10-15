@@ -26,6 +26,43 @@ body {
   }
 }
 
+p {
+  @media (min-width: 768px) {
+    text-wrap: pretty;
+  }
+}
+
+@media (hover: hover) and (min-width: 1024px) {
+  .destaques__item,
+  .quem-somos__botao,
+  .servicos-fale-conosco__lista a,
+  .solucoes__botao,
+  .armazenagem__botao,
+  .otimize__botao,
+  .area__botao,
+  .historia__botao {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px) scale(1.08);
+      box-shadow: 0 14px 28px rgb(0 0 0 / 0.3);
+    }
+  }
+
+  .redes-sociais a {
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px) scale(1.08);
+      filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.3));
+    }
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -124,6 +161,9 @@ body {
     flex-basis: auto;
     margin: auto auto 20px;
     gap: 24px;
+    img {
+      height: 40px;
+    }
     @media (min-width: 1024px) {
       display: none;
     }
@@ -134,7 +174,7 @@ body {
     height: auto;
     width: auto;
     padding: 0;
-    gap: clamp(16px, calc(5vw - 30px), 60px);
+    gap: clamp(12px, 1.6vw, 28px);
     position: static;
     background: none;
     transform: none;
@@ -142,7 +182,8 @@ body {
     transition: none;
 
     a {
-      font-size: clamp(15px, 1.4vw, 20px);
+      padding: 10px 4px;
+      font-size: clamp(13px, 1.1vw, 17px);
       white-space: nowrap;
     }
   }
@@ -318,15 +359,19 @@ body {
   }
 
   @media (min-width: 768px) {
+    grid-template-columns: auto auto auto;
     grid-template-areas: "titulo texto imagem";
+    justify-content: center;
+    column-gap: clamp(20px, 2.7vw, 52px);
+    padding-block: clamp(20px, 3vw, 60px);
 
     h2 {
-      font-size: clamp(22px, 2.2vw, 30px);
+      font-size: clamp(20px, 2.05vw, 40px);
       align-self: center;
-      margin-left: clamp(20px, calc(14vw - 70px), 200px);
+      margin: 0;
     }
     h2 span {
-      font-size: clamp(28px, 3vw, 40px);
+      font-size: clamp(26px, 2.75vw, 54px);
     }
   }
 }
@@ -338,8 +383,8 @@ body {
   margin-right: 20px;
 
   @media (min-width: 768px) {
-    width: clamp(130px, 12vw, 190px);
-    margin-right: clamp(20px, calc(14vw - 70px), 200px);
+    width: clamp(130px, 13vw, 250px);
+    margin-right: 0;
   }
 }
 
@@ -355,10 +400,11 @@ body {
 
   @media (min-width: 768px) {
     text-align: left;
-    font-size: clamp(16px, 1.6vw, 20px);
-    margin-right: clamp(16px, calc(10vw - 40px), 150px);
-    max-width: 55ch;
-    line-height: 1.5;
+    font-size: clamp(13px, 1.15vw, 22px);
+    margin: 0;
+    width: 34vw;
+    max-width: 650px;
+    line-height: 1.2;
   }
 }
 
@@ -370,11 +416,11 @@ body {
   margin-top: 20px;
 
   img {
-    width: 110px;
+    width: min(125px, calc((100vw - 52px) / 3));
     height: auto;
 
     @media (min-width: 768px) {
-      width: clamp(130px, 14vw, 190px);
+      width: clamp(150px, 16vw, 220px);
     }
   }
 }
@@ -429,6 +475,10 @@ body {
     font-size: 15px;
     padding: 16px 55px;
   }
+
+  @media (min-width: 1024px) {
+    display: inline-block;
+  }
 }
 
 .quem-somos__banner {
@@ -445,9 +495,9 @@ body {
   align-self: end;
 
   @media (min-width: 1024px) {
-    width: min(600px, calc(34vw + 40px));
+    width: min(510px, calc(29vw + 34px));
     justify-self: center;
-    margin-top: clamp(-200px, -10vw, -80px);
+    margin-top: calc(-8vw - 10px);
     margin-left: 0;
     margin-bottom: -2px;
   }
@@ -563,17 +613,18 @@ body {
     justify-content: flex-start;
     text-align: center;
     grid-area: nossos-servicos;
-    margin: clamp(0px, calc(8vw - 113px), 40px) -30px
-      clamp(30px, calc(6vw - 55px), 60px) 40px;
+    margin: clamp(30px, 4vw, 70px) -30px clamp(30px, 3vw, 50px) 40px;
 
     h2 {
       text-align: right;
+      margin: 0 0 clamp(10px, 1vw, 16px);
     }
 
     p {
       text-align: right;
+      margin: 0;
       padding-left: clamp(0px, calc(25vw - 290px), 190px);
-      padding-bottom: clamp(20px, calc(4vw - 37px), 40px);
+      padding-bottom: clamp(20px, 2vw, 32px);
     }
 
     a {
@@ -600,20 +651,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: clamp(30px, calc(9vw - 95px), 78px);
-    margin-bottom: clamp(30px, calc(6vw - 55px), 60px);
+    margin-top: clamp(30px, 4vw, 70px);
+    margin-bottom: clamp(30px, 3vw, 50px);
     text-align: center;
     grid-area: fale-conosco;
 
     h2 {
       text-align: left;
       font-size: clamp(40px, 4vw, 60px);
+      margin: 0 0 clamp(10px, 1vw, 16px);
     }
 
     p {
       text-align: left;
-      margin: 3px;
-      padding-bottom: clamp(20px, calc(4vw - 37px), 40px);
+      margin: 0;
+      padding-bottom: clamp(20px, 2vw, 32px);
     }
 
     a {
@@ -646,6 +698,9 @@ body {
     display: flex;
     h2 {
       font-size: clamp(40px, 4vw, 60px);
+    }
+    p {
+      margin: 0;
     }
   }
 }
@@ -686,7 +741,7 @@ body {
   flex-basis: 100%;
 
   img {
-    height: 40px;
+    height: 32px;
   }
   @media (min-width: 768px) {
     height: 40px;
@@ -701,6 +756,14 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 16px;
+
+  .redes-sociais {
+    padding-bottom: 10px;
+
+    @media (min-width: 768px) {
+      padding-bottom: 40px;
+    }
+  }
 }
 
 .logo-footer {
@@ -751,7 +814,7 @@ body {
   }
 
   @media (min-width: 768px) {
-    margin: 0 0 0 clamp(0px, 5vw, 100px);
+    margin: 0 0 0 clamp(0px, calc(10.3vw - 54px), 150px);
     padding-left: 40px;
   }
 }
@@ -782,7 +845,7 @@ body {
   @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
-    margin: 40px clamp(20px, 5vw, 100px);
+    margin: 40px clamp(20px, calc(12.6vw - 78px), 170px);
     gap: 20px;
 
     a {
@@ -857,7 +920,7 @@ body {
 
   @media (min-width: 768px) {
     text-align: left;
-    max-width: 60ch;
+    max-width: 37em;
     margin: 30px auto 0;
   }
 
@@ -866,7 +929,7 @@ body {
     top: -25vw;
     left: 0;
     right: 0;
-    width: clamp(640px, 39vw, 755px);
+    width: 49em;
     max-width: none;
     padding: 0;
     margin: 0 auto;
@@ -877,6 +940,10 @@ body {
     p {
       margin-bottom: 1.35em;
     }
+  }
+
+  @media (min-width: 1366px) {
+    width: 37em;
   }
 }
 
@@ -1010,7 +1077,7 @@ body {
       margin-top: clamp(16px, 2.3vw, 44px);
       font-size: clamp(12px, 1vw, 19px);
       line-height: 1.4;
-      text-wrap: wrap;
+      text-wrap: pretty;
     }
   }
 }
@@ -1622,16 +1689,57 @@ body {
 
 .contato__container {
   @media (min-width: 768px) {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, clamp(320px, 31.6vw, 607px));
     justify-content: center;
-    align-items: flex-start;
+    column-gap: clamp(20px, 3.4vw, 64px);
     padding: 25px 20px;
-  }
 
-  .contato__container .contato {
-    flex: 1;
-    max-width: 420px;
-    margin: 0;
+    .contato {
+      display: grid;
+      grid-row: span 3;
+      grid-template-rows: subgrid;
+      align-content: start;
+      max-width: none;
+      margin: 0;
+      padding: clamp(16px, 2.1vw, 40px) clamp(20px, 4.2vw, 80px);
+      font-size: clamp(13px, 1vw, 19px);
+
+      h2 {
+        align-self: start;
+        margin: 0 0 clamp(8px, 1.1vw, 21px);
+        font-size: clamp(18px, 1.65vw, 32px);
+      }
+      p {
+        align-self: start;
+        font-size: clamp(13px, 1.1vw, 21px);
+      }
+      .contato__form {
+        align-content: start;
+        margin-top: clamp(12px, 1.9vw, 36px);
+        gap: clamp(8px, 0.8vw, 15px);
+      }
+      input,
+      textarea {
+        padding: clamp(5px, 0.35vw, 7px) clamp(8px, 0.7vw, 14px);
+      }
+      .contato__acoes {
+        margin: clamp(6px, 1.1vw, 21px) 0 0;
+      }
+      button {
+        min-width: clamp(100px, 8.5vw, 164px);
+        padding: clamp(6px, 0.45vw, 9px) clamp(14px, 1.2vw, 24px);
+      }
+      textarea {
+        min-height: clamp(160px, 12.5vw, 300px);
+      }
+      &.contato--trabalhe textarea {
+        min-height: clamp(120px, 10vw, 240px);
+      }
+      .anexo__label {
+        font-size: 0.85em;
+      }
+    }
   }
 }
 
