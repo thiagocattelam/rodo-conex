@@ -426,6 +426,8 @@ p {
 }
 
 .quem-somos__conteudo {
+  position: relative;
+  z-index: 1;
   color: var(--quaternary-color);
   text-align: center;
   font-style: italic;
@@ -451,7 +453,8 @@ p {
 
     @media (min-width: 768px) {
       font-size: 20px;
-      max-width: 55ch;
+      max-width: 40ch;
+      text-wrap: balance;
       margin: 0 auto;
       margin-bottom: 60px;
       line-height: 1.5;
@@ -484,6 +487,10 @@ p {
 .quem-somos__banner {
   display: block;
   width: 100%;
+
+  @media (min-width: 768px) {
+    margin-top: calc(72px - 10.7vw);
+  }
 }
 
 .servicos-fale-conosco__imagem {
