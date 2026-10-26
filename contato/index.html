@@ -8,6 +8,11 @@
     <link rel="icon" href="../assets/home/logo-icon-navegador.png" />
     <script src="../scripts/menu.js" defer></script>
     <script src="../scripts/contato.js" defer></script>
+    <script
+      src="https://www.google.com/recaptcha/api.js?hl=pt-BR"
+      async
+      defer
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -70,7 +75,7 @@
           <form
             class="contato__form"
             id="form-contato"
-            action="/enviar"
+            action="../enviar.php"
             method="post"
           >
             <input
@@ -120,6 +125,10 @@
               required
             ></textarea>
 
+            <div
+              class="g-recaptcha full"
+              data-sitekey="6LcgKAIuAAAAANEhZyKA3mifjAAsukABDSkl5-Q8"
+            ></div>
             <div class="contato__acoes full">
               <button type="submit">E-mail</button>
               <button type="button" id="btn-whats">WhatsApp</button>
@@ -135,7 +144,7 @@
 
           <form
             class="contato__form"
-            action="/curriculo"
+            action="../curriculo.php"
             method="post"
             enctype="multipart/form-data"
           >
@@ -228,6 +237,10 @@
                 <span id="anexo-nome">Anexe seu currículo</span>
               </label>
             </div>
+            <div
+              class="g-recaptcha full"
+              data-sitekey="6LcgKAIuAAAAANEhZyKA3mifjAAsukABDSkl5-Q8"
+            ></div>
             <div class="contato__acoes full">
               <button type="submit">E-mail</button>
             </div>
