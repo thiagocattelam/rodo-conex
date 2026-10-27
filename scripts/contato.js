@@ -19,17 +19,45 @@ curriculo.addEventListener("change", () => {
     curriculo.files[0]?.name ?? "Anexe seu currículo";
 });
 
-document.querySelectorAll(".contato__form").forEach((f) => {
-  f.addEventListener("submit", (e) => {
-    if (f.querySelector("[name=g-recaptcha-response]")?.value) return;
+document.querySelectorAll("input[type=tel]").forEach((campo) => {
+  campo.addEventListener("input", () => {
+    let d = campo.value.replace(/\D/g, "");
+    if (d.length > 11 && d.startsWith("55")) d = d.slice(2);
+    d = d.slice(0, 11);
 
-    e.preventDefault();
-    alert('Marque a caixa "Não sou um robô" antes de enviar.');
+    const meio = d.length > 10 ? 5 : 4;
+    const fim = d.slice(2 + meio);
+
+    campo.value =
+      d.length > 2
+        ? `(${d.slice(0, 2)}) ${d.slice(2, 2 + meio)}${fim ? "-" + fim : ""}`
+        : d && `(${d}`;
   });
 });
 
+function atualizarEnvio() {
+  document.querySelectorAll(".contato__form").forEach((f) => {
+    f.querySelector("[type=submit]").disabled =
+      !f.querySelector("[name=g-recaptcha-response]")?.value;
+  });
+}
+
+const mensagens = {
+  enviado: "Mensagem enviada! Em breve entraremos em contato.",
+  erro: "Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.",
+};
+
 const retorno = new URLSearchParams(location.search).get("status");
 
-if (retorno === "enviado") alert("Mensagem enviada! Em breve entraremos em contato.");
-if (retorno === "erro") alert("Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.");
+if (mensagens[retorno]) {
+  const aviso = document.createElement("div");
+  aviso.className = `aviso aviso--${retorno}`;
+  aviso.innerHTML = `<p>${mensagens[retorno]}</p><button type="button" aria-label="Fechar">×</button>`;
+  document.body.append(aviso);
+
+  const fechar = () => aviso.remove();
+  aviso.querySelector("button").addEventListener("click", fechar);
+  setTimeout(fechar, 6000);
+}
+
 if (retorno) history.replaceState(null, "", location.pathname);

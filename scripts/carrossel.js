@@ -8,12 +8,10 @@ function criarCarrossel(seletorBloco) {
 
   if (itens.length === 0) return;
 
-  // Descobre qual item já começa ativo no HTML
   let indiceAtual = itens.findIndex((item) =>
     item.classList.contains(classeAtivo),
   );
 
-  // Se nenhum estiver ativo, ativa o primeiro
   if (indiceAtual === -1) {
     indiceAtual = 0;
     itens[0].classList.add(classeAtivo);
@@ -25,7 +23,6 @@ function criarCarrossel(seletorBloco) {
     itens[indiceAtual].classList.add(classeAtivo);
   }
 
-  // ?. só liga o evento se a seta existir
   setaProxima?.addEventListener("click", () => girar(indiceAtual + 1));
   setaAnterior?.addEventListener("click", () => girar(indiceAtual - 1));
 }

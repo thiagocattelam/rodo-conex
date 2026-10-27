@@ -10,7 +10,7 @@ $nome = campo('nome');
 $email = filter_var(campo('email'), FILTER_VALIDATE_EMAIL);
 $arquivo = $_FILES['curriculo'] ?? null;
 
-if (!$nome || !$email || !$arquivo || $arquivo['error'] !== UPLOAD_ERR_OK) voltar('erro');
+if (!$nome || !$email || !telefoneValido() || !$arquivo || $arquivo['error'] !== UPLOAD_ERR_OK) voltar('erro');
 
 $extensao = strtolower(pathinfo($arquivo['name'], PATHINFO_EXTENSION));
 

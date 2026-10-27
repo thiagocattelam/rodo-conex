@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !captchaValido()) voltar('erro');
 $nome = campo('nome');
 $email = filter_var(campo('email'), FILTER_VALIDATE_EMAIL);
 
-if (!$nome || !$email) voltar('erro');
+if (!$nome || !$email || !telefoneValido()) voltar('erro');
 
 $corpo = "Nome: $nome\n"
     . 'Telefone: ' . campo('telefone') . "\n"

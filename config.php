@@ -1,12 +1,5 @@
 <?php
 
-// Formulário de contato: sai do operacional para os dois
-const EMAIL_CONTATO_DE = 'operacional@rodoconex.com.br';
-const EMAIL_CONTATO_PARA = 'operacional@rodoconex.com.br, Jefferson@rodoconex.com.br';
-
-// Trabalhe conosco: sai do financeiro para ele mesmo
-const EMAIL_CURRICULO = 'financeiro@rodoconex.com.br';
-
 require __DIR__ . '/segredos.php';
 
 function captchaValido()
@@ -31,6 +24,13 @@ function captchaValido()
 function campo($nome)
 {
     return trim(strip_tags($_POST[$nome] ?? ''));
+}
+
+function telefoneValido()
+{
+    $digitos = strlen(preg_replace('/\D/', '', campo('telefone')));
+
+    return $digitos === 10 || $digitos === 11;
 }
 
 function voltar($status)
