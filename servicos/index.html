@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="icon" href="../assets/home/logo-icon-navegador.png" />
     <script src="../scripts/menu.js" defer></script>
+    <script src="../scripts/cookies.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18554341836"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18554341836');
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('consent', window.cookiesAceitos ? 'grant' : 'revoke');
+    fbq('init', '1039503959155397');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <header class="header">
@@ -150,7 +175,7 @@
               <li>
                 <a href="tel:5551993122093">
                   <img src="../assets/home/icon-icon.png" alt="" />
-                  <p>(51) 99312.2093</p>
+                  <p><span class="contato__ddd">(51)</span> 99312.2093</p>
                 </a>
               </li>
               <li>
@@ -159,7 +184,7 @@
                   target="_blank"
                 >
                   <img src="../assets/home/whats-icon.png" alt="" />
-                  <p>(51) 98205.9997</p>
+                  <p><span class="contato__ddd">(51)</span> 98205.9997</p>
                 </a>
               </li>
               <li>

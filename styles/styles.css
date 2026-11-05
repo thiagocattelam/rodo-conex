@@ -511,8 +511,8 @@ p {
 .servicos-fale-conosco__imagem {
   grid-area: imagem;
   display: block;
-  width: clamp(200px, 54vw, 270px);
-  margin-left: clamp(-90px, -22vw, -70px);
+  width: clamp(170px, 54vw, 270px);
+  margin-left: clamp(-90px, -17vw, -50px);
   margin-bottom: -2px;
   align-self: end;
 
@@ -595,24 +595,32 @@ p {
     > li {
       grid-area: 1 / 1;
       display: block;
+      align-self: center;
       visibility: hidden;
       font-family: Gotham_book;
 
       h2 {
-        font-size: clamp(22px, 7vw, 40px);
-        margin-top: 0;
+        font-size: clamp(22px, 7.4vw, 40px);
+        line-height: 0.92;
+        margin: 0 0 clamp(4px, 0.7vw, 8px);
       }
 
       p {
-        margin: -20px 0 0 0;
-        max-width: 24ch;
-        font-size: clamp(13px, 3.8vw, 18px);
-        line-height: 1.3;
+        margin: 0;
+        font-size: clamp(11.5px, 3.67vw, 18px);
+        line-height: 1.26;
       }
     }
 
     > .servicos-fale-conosco__item--ativo {
       visibility: visible;
+    }
+
+    a {
+      font-size: clamp(9px, 2.7vw, 13px);
+      font-style: italic;
+      padding: clamp(10px, 2.6vw, 14px) clamp(26px, 8.7vw, 45px);
+      margin-top: clamp(10px, 3.3vw, 16px);
     }
   }
 
@@ -733,6 +741,12 @@ p {
   padding: 0;
   grid-area: imagem;
 
+  svg {
+    display: block;
+    width: clamp(30px, 9.3vw, 40px);
+    height: clamp(30px, 9.3vw, 40px);
+  }
+
   @media (min-width: 1024px) {
     display: none;
   }
@@ -740,14 +754,14 @@ p {
 
 .servicos-fale-conosco__seta--anterior {
   grid-area: anterior;
-  margin-left: -12px;
-  margin-right: 10px;
+  margin-left: max(-4.2vw, -18px);
+  margin-right: min(0.5vw, 2px);
 }
 
 .servicos-fale-conosco__seta--proxima {
   grid-area: proxima;
-  margin-left: 12px;
-  margin-right: 8px;
+  margin-left: 0;
+  margin-right: min(0.7vw, 3px);
 }
 
 .footer {
@@ -838,6 +852,70 @@ p {
   @media (min-width: 768px) {
     margin: 0 0 0 clamp(0px, calc(10.3vw - 54px), 150px);
     padding-left: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__principal .redes-sociais {
+    gap: clamp(30px, 10.4vw, 50px);
+    padding-top: clamp(36px, 11.8vw, 52px);
+  }
+
+  .logo-footer {
+    margin-left: 1.4vw;
+  }
+
+  .logo-footer img {
+    display: block;
+    width: clamp(105px, 33vw, 180px);
+  }
+
+  .contato__footer {
+    flex: 0 0 auto;
+  }
+
+  .contato__lista {
+    margin: clamp(22px, 8vw, 36px) 0 clamp(28px, 10.5vw, 46px);
+    padding-left: clamp(16px, 7.2vw, 32px);
+
+    li + li {
+      margin-top: clamp(8px, 3.1vw, 14px);
+    }
+
+    li:last-child {
+      margin-top: clamp(10px, 3.6vw, 16px);
+    }
+
+    a {
+      gap: clamp(5px, 1.8vw, 10px);
+    }
+
+    img {
+      flex: none;
+      width: clamp(16px, 4.8vw, 24px);
+      height: clamp(16px, 4.8vw, 24px);
+      object-fit: contain;
+    }
+
+    li:last-child img {
+      height: clamp(20px, 6.2vw, 30px);
+    }
+
+    p {
+      max-width: 11.2em;
+      margin: 0;
+      font-size: clamp(11px, 3.4vw, 18px);
+      line-height: 1.24;
+    }
+
+    li:not(:last-child) p {
+      max-width: none;
+      font-size: clamp(12px, 3.67vw, 20px);
+    }
+  }
+
+  .contato__ddd {
+    font-size: 0.78em;
   }
 }
 
@@ -2045,4 +2123,74 @@ p {
   .mapa__rodape {
     margin-top: -18vw;
   }
+}
+
+.cookies {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  width: min(960px, calc(100% - 32px));
+  padding: 20px;
+  border-radius: 7px;
+  background: var(--primary-color);
+  color: var(--quaternary-color);
+  font-family: Gotham_book;
+  font-style: italic;
+  box-shadow: 0 14px 28px rgb(0 0 0 / 0.3);
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.cookies__acoes {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.cookies__botao {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid var(--quaternary-color);
+  border-radius: 7px;
+  font-family: Gotham;
+  font-size: 12px;
+  font-style: italic;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cookies__botao--recusar {
+  background: none;
+  color: var(--quaternary-color);
+}
+
+.cookies__botao--aceitar {
+  background: var(--quaternary-color);
+  color: var(--primary-color);
+}
+
+.footer__cookies {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
 }
